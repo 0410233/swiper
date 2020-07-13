@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Swiper Demo</title>
+  <link rel="stylesheet" href="../package/swiper.css">
+  <style>
+    .swiper-container {
+      max-width: 800px;
+      margin: 60px auto;
+    }
+
+    .swiper-container img {
+      max-width: 100%;
+    }
+  </style>
+</head>
+<body>
+  <!-- Slider main container -->
+  <div class="swiper-container">
+    <!-- Additional required wrapper -->
+    <div class="swiper-wrapper">
+        <!-- Slides -->
+        <li class="swiper-slide"><img src="images/alita-1.jpg" alt="alita"></li>
+        <li class="swiper-slide"><img src="images/alita-2.jpg" alt="alita"></li>
+        <li class="swiper-slide"><img src="images/alita-3.jpg" alt="alita"></li>
+        <li class="swiper-slide"><img src="images/alita-4.jpg" alt="alita"></li>
+        <li class="swiper-slide"><img src="images/alita-5.jpg" alt="alita"></li>
+    </div>
+    <!-- If we need pagination -->
+    <div class="swiper-pagination"></div>
+
+    <!-- If we need navigation buttons -->
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
+  </div>
+  <script src="jquery.min.js"></script>
+  <script src="../package/swiper.js"></script>
+  <script>
+    var swiper = new Swiper('.swiper-container', {
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+    });
+  </script>
+</body>
+</html>
